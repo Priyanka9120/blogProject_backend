@@ -1,11 +1,7 @@
 //=====================Importing Module and Packages=====================//
-const blogModel = require("../models/blogModel")
-const authorModel = require("../models/authorModel")
+const blogModel = require("../models/blogModel.js")
+const authorModel = require("../models/authorModel.js")
 const moment = require('moment');
-
-
-
-
 
 //=====================Date of Indian Time Zone=====================//
 let DATE = moment().format()

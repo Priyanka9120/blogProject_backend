@@ -1,5 +1,5 @@
 //=====================Importing Module and Packages=====================//
-const userModel=require('../models/userModel')
+const userModel=require('../models/userModel.js')
 const JWT = require('jsonwebtoken')
 
 

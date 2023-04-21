@@ -1,5 +1,5 @@
 //=====================Importing Module and Packages=====================//
-const authorModel = require("../models/authorModel")
+const authorModel = require("../models/authorModel.js")
 const JWT = require("jsonwebtoken")
 
 

@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const { createUser, loginUser } = require("../controller/userController")
-const { CreateAuthor, AuthorLogin } = require("../controller/authorController")
-const { CreateBlog, GetDataBlog, UpdateBlog, DeleteBlog, DeleteByQuery } = require("../controller/blogController")
-const { Authentication, Authorisation } = require("../Middleware/auth")
+const { createUser, loginUser } = require("../controller/userController.js")
+const { CreateAuthor, AuthorLogin } = require("../controller/authorController.js")
+const { CreateBlog, GetDataBlog, UpdateBlog, DeleteBlog, DeleteByQuery } = require("../controller/blogController.js")
+const { Authentication, Authorisation } = require("../Middleware/auth.js")
 
 
 //----------------------user's APIs ----------------------//
@@ -12,7 +12,6 @@ const { Authentication, Authorisation } = require("../Middleware/auth")
 router.post("/register", createUser)
 //===================== User Login (Post API) =====================//
 router.post("/login", loginUser)
-
 
 //=====================Create Authors(Post API)=====================//
 router.post("/authors", CreateAuthor)
@@ -35,23 +34,9 @@ router.delete("/blogs/:blogId", Authentication, Authorisation, DeleteBlog)
 //=====================Delete Blog Data By Query Param(Delete API)=====================//
 router.delete("/blogs", Authentication, Authorisation, DeleteByQuery)
 
-
-
-
-
-
-
-
-
-
-
-
 //---------------------- It will Handle error When You input Wrong Route =====================>>>//
 router.all("/**", (req, res) => { return res.status(404).send({ status: false, msg: "This API request is not available!" }) })
 //<<<------------------------------------------------------------------->>>//
-
-
-
 //----------------------Module Export----------------------//
 module.exports = router;
 //<<<------------------------------------------------------------------->>>//

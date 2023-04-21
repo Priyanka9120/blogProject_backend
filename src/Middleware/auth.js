@@ -1,6 +1,6 @@
 //=====================Importing Module and Packages=====================//
 const JWT = require("jsonwebtoken")
-const blogModel = require("../models/blogModel")
+const blogModel = require("../models/blogModel.js")
 
 
 
